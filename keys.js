@@ -13,6 +13,6 @@ module.exports = twitterKeys;
 //     client_secret: "57d8efbc8e954218bc8a2e3f5d4ab76e"
 // };
 
-// var movies = {
-//     key: "a3c5d16d"
-// };
+ var movies = {
+     key: "a3c5d16d"
+ };

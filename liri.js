@@ -7,16 +7,10 @@
 
  var fs = require("fs");
 
- var request = require("request");
+ var request=require("request");
  var keys=require("./keys.js");
 
- request("http://www.omdbapi.com/?apikey=[a3c5d16d]&r"), function(error, response, body) {
 
-             if (!error && response.statusCode === 200) {
-
-                 console.log(body);
-             }
-         };
 
          // var SpotifyWebApi = require('spotify-web-api-node');
 
@@ -55,3 +49,20 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
     console.log(tweets[0].text);
   }
 });
+var movies = {
+     key: "40e9cece"
+ };
+var APIClient = require('omdb-api-client');
+var omdb = new APIClient();
+
+omdb({t:'Mr+Nobody',apikey:movies.key}).list().then(function(movie) {
+    console.log(movie);
+}).catch(function(err) {
+    console.log(err);
+});
+
+
+
+
+
+
